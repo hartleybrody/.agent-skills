@@ -20,3 +20,17 @@ for dir in "$SCRIPT_DIR"/*/; do
     echo "linked: $name -> $target"
   fi
 done
+
+# Remove stale symlinks pointing into this repo
+for link in "$SKILLS_DIR"/*; do
+  [ -L "$link" ] || continue
+  dest="$(readlink "$link")"
+  case "$dest" in
+    "$SCRIPT_DIR"/*)
+      if [ ! -e "$link" ]; then
+        rm "$link"
+        echo "removed stale: $(basename "$link") -> $dest"
+      fi
+      ;;
+  esac
+done
