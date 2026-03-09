@@ -1,5 +1,5 @@
 ---
-name: ci-feedback
+name: pr-feedback
 description: Look at in-line code comments on PR and prepare response
 ---
 

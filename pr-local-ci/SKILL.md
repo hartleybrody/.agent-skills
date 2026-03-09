@@ -1,5 +1,5 @@
 ---
-name: ci-local
+name: pr-local-ci
 description: Run all CI tests locally, push on success
 ---
 

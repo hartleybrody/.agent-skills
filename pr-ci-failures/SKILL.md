@@ -1,5 +1,5 @@
 ---
-name: ci-test
+name: pr-ci-failures
 description: Look for failing CI tests and fix issues
 ---
 
