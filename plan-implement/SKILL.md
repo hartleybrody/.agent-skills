@@ -9,4 +9,10 @@ update the planning doc to mark off each section as you complete it, and add any
 
 ensure that all code linters and formatters pass, and that you're following conventions in @AGENTS.md and other coding agent rules. please implement the tests described in the plan, but do NOT worry about tests passing yet, i'll review those later.
 
+please create a new branch with an initially empty marker commit (to help with resolving stacked branches), but do NOT commit any changes yet:
+
+```
+git switch -c hartley/{FEATURE_NAME} && git commit --allow-empty -m "START stacked branch"
+```
+
 please add a summary of the completed implementation to the bottom of the doc.
