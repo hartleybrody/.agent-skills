@@ -23,3 +23,8 @@ Each top-level directory is symlinked individually. Re-running the script links 
 | `pr-ci-failures` | Look for failing CI tests and fix issues |
 | `pr-feedback` | Look at in-line code comments on PR and prepare response |
 | `pr-local-ci` | Run all CI tests locally, push on success |
+| `research-latest` | Get a deep understanding of a system, write research doc |
+
+## Agent Guidance
+
+`AGENTS.md` provides instructions for AI coding agents working in this repo. It covers skill format, directory structure, and design conventions. `CLAUDE.md` imports it for Claude Code compatibility.
