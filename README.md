@@ -2,6 +2,8 @@
 
 A repository of custom agent skills for Claude Code.
 
+➡️ [More information on how to use them here](https://blog.hartleybrody.com/markdown-research-planning/).
+
 ## Installation
 
 Run the install script to symlink all skills into `~/.claude/skills/`:
