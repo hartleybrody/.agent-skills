@@ -19,13 +19,13 @@ Each top-level directory is symlinked individually. Re-running the script links 
 | Skill | Description |
 |-------|-------------|
 | `commit` | Make a collaborative, descriptive commit |
+| `research-latest` | Get a deep understanding of a system, write research doc |
 | `plan-create` | Read research, context and intention to create plan doc |
-| `plan-implement` | Begin implementing from a plan doc |
 | `plan-update` | Update the plan doc, from my annotations |
+| `plan-implement` | Begin implementing from a plan doc |
+| `pr-local-ci` | Run all CI tests locally, push on success |
 | `pr-ci-failures` | Look for failing CI tests and fix issues |
 | `pr-feedback` | Look at in-line code comments on PR and prepare response |
-| `pr-local-ci` | Run all CI tests locally, push on success |
-| `research-latest` | Get a deep understanding of a system, write research doc |
 
 ## Agent Guidance
 
