@@ -27,6 +27,7 @@ Each top-level directory is symlinked individually. Re-running the script links 
 | `pr-local-ci` | Run all CI tests locally, push on success |
 | `pr-ci-failures` | Look for failing CI tests and fix issues |
 | `pr-feedback` | Look at in-line code comments on PR and prepare response |
+| `pr-update-desc` | Update description of existing PR |
 
 ## Agent Guidance
 
