@@ -23,11 +23,12 @@ Each top-level directory is symlinked individually. Re-running the script links 
 | `plan-create` | Read research, context and intention to create plan doc |
 | `plan-update` | Update the plan doc, from my annotations |
 | `plan-implement` | Begin implementing from a plan doc |
-| `pr-create` | Create a new Pull Request (PR) |
 | `pr-local-ci` | Run all CI tests locally, push on success |
+| `pr-create` | Create a new Pull Request (PR) |
 | `pr-ci-failures` | Look for failing CI tests and fix issues |
 | `pr-feedback` | Look at in-line code comments on PR and prepare response |
 | `pr-update-desc` | Update description of existing PR |
+| `pr-review` | Begin a review for a set of changes in a PR |
 
 ## Agent Guidance
 
