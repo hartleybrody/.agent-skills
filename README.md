@@ -6,7 +6,7 @@ A repository of custom agent skills for Claude Code.
 
 ## Installation
 
-Run the install script to symlink all skills into `~/.claude/skills/`:
+Run the install script to symlink all skills into `~/.claude/skills/` (Claude Code) and `~/.agents/skills/` (Codex):
 
 ```sh
 ./install.sh
