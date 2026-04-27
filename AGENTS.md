@@ -88,6 +88,6 @@ Keep the prompt concise and imperative. Include guardrails for actions the skill
 - **One file per skill**: Each skill is a single `SKILL.md`. No scripts, no build steps, no dependencies.
 - **Guardrails**: Skills that modify code or git state should include explicit constraints (e.g. "only commit when explicitly asked", "do NOT push without asking").
 - **Human checkpoints**: Multi-step workflows (plan-create -> plan-update -> plan-implement) separate phases so humans review between steps.
-- **Output directories**: Skills that produce documents write to `.scratch/` subdirectories:
-  - `.scratch/plan/` for implementation plans
-  - `.scratch/research/` for research reports
+- **Output directories**: Skills that produce documents write to `.agents/` subdirectories:
+  - `.agents/plan/` for implementation plans
+  - `.agents/research/` for research reports
