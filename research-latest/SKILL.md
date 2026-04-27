@@ -9,4 +9,4 @@ it is mostly contained in the following directories but may rely on code from ot
 
 understand how it works deeply, including all of the specifics.
 
-write a detailed report of your findings to .scratch/research/{SYSTEM_NAME}-latest.md and include a timestamp of when it was last updated (ie today's date)
+write a detailed report of your findings to .agents/research/{SYSTEM_NAME}-latest.md and include a timestamp of when it was last updated (ie today's date)

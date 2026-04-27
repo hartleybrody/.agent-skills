@@ -9,4 +9,4 @@ please come up with a step-by-step plan for how to implement this change, and wr
 
 you MUST include the exact text of this prompt as a section at the bottom called “initial prompt and feature intention”. please also include the date this plan was generated (ie today) and an estimate of lines of code that will be changed.
 
-write the output to .scratch/plan/<FEATURE_SUMMARY>.md
+write the output to .agents/plan/<FEATURE_SUMMARY>.md
