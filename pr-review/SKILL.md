@@ -3,15 +3,19 @@ name: pr-review
 description: Begin a review for a set of changes in a PR
 ---
 
-can you please look through the changes on this PR's branch, compared to the target branch for the PR? if not target is specified, then compare to `main` branch
+Please review the changes on the current git branch compared to the PR target branch, or `main` if the target is unavailable.
 
-then please provide
-- a high level overview of the changes (3-5 sentences)
-- a breakdown of how much of it is application code, tests, mock data or whitespace changes
+I am specifically looking for opportunities to tighten up the code logic and keep the PR small and conceptually clean. Focus on:
+- redundant calculations or duplicated work
+- leaky abstractions across layers
+- duplicated conditionals or state-machine logic
+- places where adding or clarifying an invariant would simplify the code
+- code that could move to an existing helper/model/service to reduce PR surface area
+- areas where tests mirror duplicated implementation rather than asserting the intended invariant
 
-afterwards, provide a summary of
-- any new patterns or deviations from existing patterns
-- any code that doesn't seem to have test coverage
-- code comments that suppress linter or formatter rules
-- anywhere there are security or performance concerns
+Please do not run linters or unit tests unless needed to understand behavior. CI already covers deterministic checks.
 
+Output format:
+1. PR Overview: 3-5 sentences summarizing what changed.
+2. Findings: a quick list of actionable findings, each 2-3 sentences, ordered by impact. Include file/line references where possible.
+3. Tightening Opportunities: optional short list of low-risk cleanup ideas if they are not serious enough to be findings.
