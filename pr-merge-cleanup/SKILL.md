@@ -1,6 +1,6 @@
 ---
-name: pr-create
-description: Create a new Pull Request (PR)
+name: pr-merge-cleanup
+description: Verify that the local branch was up-to-date with what got merged in a PR, before deleting the local branch.
 ---
 
 this feature branch has been merged on origin (github) via pull request.
