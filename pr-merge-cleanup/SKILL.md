@@ -12,14 +12,6 @@ i would now like to confirm that there are no lingering local edits that i forgo
 first echo out the name of the current branch, so i know what context you're working with. then, on the current feature branch, run the following:
 
 ```bash
-git push origin @
-```
-
-if there are ANY changes that are pushed, that means i missed those changes and they were not merged, please warn me and exit immediately.
-
-then run:
-
-```bash
 git status
 ```
 if there are ANY staged but uncommitted files, exit immediately.
