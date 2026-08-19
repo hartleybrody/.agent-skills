@@ -9,4 +9,6 @@ please come up with a step-by-step plan for how to implement this change, and wr
 
 you MUST include the exact text of this prompt as a section at the bottom called “initial prompt and feature intention”. please also include the date this plan was generated (ie today) and an estimate of lines of code that will be changed.
 
+please use the "simple-english" skill, if it is available, so that you write with the rules of ASD-STE100 Simplified Technical English so it is clear, unambiguous, and free of AI slop. if no skill is available with that name, you can ignore this instruction.
+
 write the output to .agents/plan/<FEATURE_SUMMARY>.md
