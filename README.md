@@ -29,6 +29,7 @@ Each top-level directory is symlinked individually. Re-running the script links 
 | `pr-feedback` | Look at in-line code comments on PR and prepare response |
 | `pr-update-desc` | Update description of existing PR |
 | `pr-review` | Begin a review for a set of changes in a PR |
+| `pr-merge-cleanup` | Verify the local branch matches what got merged, then delete it |
 
 ## Agent Guidance
 

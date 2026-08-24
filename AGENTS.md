@@ -6,7 +6,7 @@ This file provides guidance to AI coding agents working in this repository.
 
 This is a collection of custom agent skills for Claude Code. Each skill is a self-contained prompt that extends an AI coding agent's capabilities with specialized workflows — committing, planning, PR review, CI debugging, and research.
 
-Skills are pure Markdown instructions (no runtime code). They are installed by symlinking into `~/.claude/skills/`, where Claude Code discovers and loads them on demand. Humans invoke skills within an agent session via slash commands (e.g. `/commit`, `/pr-feedback`).
+Skills are pure Markdown instructions (no runtime code). They are installed by symlinking into `~/.claude/skills/` and `~/.agents/skills/`, where the agent discovers and loads them on demand. Humans invoke skills within an agent session via slash commands (e.g. `/commit`, `/pr-feedback`).
 
 ## Skill Format
 
@@ -43,16 +43,20 @@ Keep the prompt concise and imperative. Include guardrails for actions the skill
 ├── plan-implement/SKILL.md
 ├── plan-update/SKILL.md
 ├── pr-ci-failures/SKILL.md
+├── pr-create/SKILL.md
 ├── pr-feedback/SKILL.md
 ├── pr-local-ci/SKILL.md
+├── pr-merge-cleanup/SKILL.md
+├── pr-review/SKILL.md
+├── pr-update-desc/SKILL.md
 └── research-latest/SKILL.md
 ```
 
 ## Installation
 
-`install.sh` manages the connection between this repo and `~/.claude/skills/`:
+`install.sh` manages the connection between this repo and the agent skill directories, `~/.claude/skills/` (Claude Code) and `~/.agents/skills/` (Codex):
 
-- Creates a symlink in `~/.claude/skills/` for each skill directory
+- Creates a symlink in both of those directories for each skill directory in this repo
 - Skips if a non-symlink already exists at the target path
 - Removes stale symlinks that point to deleted skill directories in this repo
 - Is idempotent — safe to re-run at any time
@@ -62,20 +66,24 @@ Keep the prompt concise and imperative. Include guardrails for actions the skill
 | Skill | Description |
 |-------|-------------|
 | `commit` | Make a collaborative, descriptive commit |
-| `plan-create` | Read research, context and intention to create a plan doc |
+| `research-latest` | Get a deep understanding of a system, write research doc |
+| `plan-create` | Read research, context and intention to create plan doc |
+| `plan-update` | Update the plan doc, from my annotations |
 | `plan-implement` | Begin implementing from a plan doc |
-| `plan-update` | Update the plan doc from user annotations |
+| `pr-local-ci` | Run all CI tests locally, push on success |
+| `pr-create` | Create a new Pull Request (PR) |
 | `pr-ci-failures` | Look for failing CI tests and fix issues |
 | `pr-feedback` | Look at in-line code comments on PR and prepare response |
-| `pr-local-ci` | Run all CI tests locally, push on success |
-| `research-latest` | Get a deep understanding of a system, write research doc |
+| `pr-update-desc` | Update description of existing PR |
+| `pr-review` | Begin a review for a set of changes in a PR |
+| `pr-merge-cleanup` | Verify the local branch matches what got merged, then delete it |
 
 ## Adding a New Skill
 
 1. Create a new directory at the repo root with a kebab-case name
 2. Add a `SKILL.md` file with `name` and `description` in the YAML front matter
 3. Write the prompt instructions in the Markdown body
-4. Run `./install.sh` to symlink into `~/.claude/skills/`
+4. Run `./install.sh` to symlink into the agent skill directories
 5. Update the skills table in this file and in `README.md`
 
 ## Removing a Skill
