@@ -1,5 +1,5 @@
 ---
-name: pr-update
+name: pr-update-desc
 description: Update the description of an existing Pull Request (PR)
 ---
 
